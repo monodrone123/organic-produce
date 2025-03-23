@@ -249,41 +249,32 @@ const Navbar: React.FC = () => {
               gap: 2
             }}
           >
-            <Box
-              component="img"
-              src="/resources/images/Logo.png"
-              alt="Nature's Crate Logo"
-              sx={{ 
-                height: 45,
-                width: 45,
-                borderRadius: '50%',
-                bgcolor: '#1a1a1a',
-                p: 1,
-                objectFit: 'contain'
-              }}
-            />
-            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-              <Typography
-                variant="subtitle1"
-                sx={{
-                  fontWeight: 600,
-                  color: '#1a1a1a',
-                  lineHeight: 1,
-                  fontSize: '1.1rem'
+            <Box sx={{ 
+              width: 45, 
+              height: 45, 
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              bgcolor: '#1a1a1a',
+              borderRadius: '50%',
+              p: 1
+            }}>
+              <Box
+                component="img"
+                src="/organic-produce/resources/images/Logo.png"
+                alt="Nature's Crate"
+                sx={{ 
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain'
                 }}
-              >
+              />
+            </Box>
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.5 }}>
+              <Typography variant="h6" sx={{ fontWeight: 600, fontSize: '1.1rem', lineHeight: 1 }}>
                 Nature's Crate
               </Typography>
-              <Typography
-                variant="caption"
-                sx={{
-                  color: '#4CAF50',
-                  letterSpacing: '0.5px',
-                  fontSize: '0.6rem',
-                  fontWeight: 500,
-                  mt: 0.5
-                }}
-              >
+              <Typography variant="caption" sx={{ fontSize: '0.6rem', letterSpacing: 1 }}>
                 PICKED BY NATURE, DELIVERED BY US
               </Typography>
             </Box>
