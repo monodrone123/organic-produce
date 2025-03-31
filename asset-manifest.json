@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/organic-produce/static/js/main.8da86ac2.js",
+    "main.js": "/organic-produce/static/js/main.e23321ff.js",
     "index.html": "/organic-produce/index.html",
-    "main.8da86ac2.js.map": "/organic-produce/static/js/main.8da86ac2.js.map"
+    "main.e23321ff.js.map": "/organic-produce/static/js/main.e23321ff.js.map"
   },
   "entrypoints": [
-    "static/js/main.8da86ac2.js"
+    "static/js/main.e23321ff.js"
   ]
 }
