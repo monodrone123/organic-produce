@@ -325,13 +325,27 @@ const Home: React.FC = () => {
       <LeftPanel />
       <Box
         sx={{
-          width: '60%',
-          mx: 'auto',
-          px: { xs: 2, sm: 3 },
+          width: { xs: '100%', lg: '60%' },
           transition: 'all 0.3s ease-in-out',
           display: { xs: 'block', lg: 'block' },
-          marginLeft: { xs: 'auto', lg: '20%' },
-          marginRight: { xs: 'auto', lg: '20%' }
+          position: { xs: 'static', lg: 'fixed' },
+          left: { lg: '20%' },
+          px: { xs: 2, sm: 3 },
+          height: 'calc(100vh - 80px)',
+          overflowY: 'auto',
+          '&::-webkit-scrollbar': {
+            width: '8px'
+          },
+          '&::-webkit-scrollbar-track': {
+            background: '#f1f1f1'
+          },
+          '&::-webkit-scrollbar-thumb': {
+            background: '#888',
+            borderRadius: '4px',
+            '&:hover': {
+              background: '#555'
+            }
+          }
         }}
       >
         <Grid container spacing={3}>
