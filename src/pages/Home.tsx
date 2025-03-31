@@ -325,10 +325,14 @@ const Home: React.FC = () => {
       <LeftPanel />
       <Box
         sx={{
-          width: { xs: '100%', lg: '60%', xl: '70%' },
+          width: '60%',
           mx: 'auto',
           px: { xs: 2, sm: 3 },
           transition: 'all 0.3s ease-in-out',
+          display: { xs: 'block', lg: 'block' },
+          position: 'relative',
+          left: '20%',
+          transform: 'translateX(-20%)',
         }}
       >
         <Grid container spacing={3}>
