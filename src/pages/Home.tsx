@@ -330,9 +330,8 @@ const Home: React.FC = () => {
           px: { xs: 2, sm: 3 },
           transition: 'all 0.3s ease-in-out',
           display: { xs: 'block', lg: 'block' },
-          position: 'relative',
-          left: '20%',
-          transform: 'translateX(-20%)',
+          marginLeft: { xs: 'auto', lg: '20%' },
+          marginRight: { xs: 'auto', lg: '20%' }
         }}
       >
         <Grid container spacing={3}>
