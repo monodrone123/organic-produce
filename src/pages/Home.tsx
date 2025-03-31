@@ -327,7 +327,8 @@ const Home: React.FC = () => {
         sx={{
           width: { xs: '100%', lg: '60%', xl: '70%' },
           mx: 'auto',
-          px: { xs: 2, sm: 3 }
+          px: { xs: 2, sm: 3 },
+          transition: 'all 0.3s ease-in-out',
         }}
       >
         <Grid container spacing={3}>
@@ -339,10 +340,37 @@ const Home: React.FC = () => {
                   display: 'flex',
                   flexDirection: 'column',
                   border: '1px solid #e0e0e0',
-                  transition: 'all 0.3s ease',
+                  transition: 'all 0.3s ease-in-out',
+                  transform: 'translateY(0)',
                   '&:hover': {
+                    transform: 'translateY(-4px)',
                     boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
                     borderColor: '#0c831f'
+                  },
+                  '& .MuiCardMedia-root': {
+                    transition: 'transform 0.3s ease-in-out',
+                    '&:hover': {
+                      transform: 'scale(1.02)'
+                    }
+                  },
+                  '& .MuiButton-root': {
+                    transition: 'all 0.2s ease-in-out',
+                    '&:not(:disabled):hover': {
+                      transform: 'translateY(-2px)',
+                      boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                    }
+                  },
+                  '& .MuiIconButton-root': {
+                    transition: 'all 0.2s ease-in-out',
+                    '&:hover': {
+                      backgroundColor: 'rgba(12, 131, 31, 0.08)'
+                    }
+                  },
+                  '& .MuiTextField-root': {
+                    transition: 'all 0.2s ease-in-out',
+                    '&:focus-within': {
+                      transform: 'scale(1.02)'
+                    }
                   }
                 }}
               >
@@ -480,6 +508,16 @@ const Home: React.FC = () => {
         autoHideDuration={3000}
         onClose={() => setSnackbarOpen(false)}
         message="Item added to cart"
+        TransitionProps={{
+          enter: true,
+          exit: true
+        }}
+        sx={{
+          '& .MuiSnackbarContent-root': {
+            transition: 'all 0.3s ease-in-out',
+            backgroundColor: '#0c831f'
+          }
+        }}
       />
     </Box>
   );

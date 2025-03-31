@@ -33,12 +33,33 @@ export const LeftPanel: React.FC = () => {
         overflowY: 'auto',
         p: 2,
         display: { xs: 'none', lg: 'block' },
+        transition: 'all 0.3s ease-in-out',
         '&::-webkit-scrollbar': {
           width: '6px',
         },
         '&::-webkit-scrollbar-thumb': {
           backgroundColor: '#e0e0e0',
           borderRadius: '3px',
+        },
+        '& .MuiPaper-root': {
+          transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
+          '&:hover': {
+            transform: 'translateY(-2px)',
+            boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+          }
+        },
+        '& .MuiListItem-button': {
+          transition: 'all 0.2s ease-in-out',
+          '&:hover': {
+            transform: 'translateX(4px)',
+            bgcolor: '#f5f5f5',
+          }
+        },
+        '& .MuiChip-root': {
+          transition: 'all 0.2s ease-in-out',
+          '&:hover': {
+            transform: 'scale(1.05)',
+          }
         }
       }}
     >
@@ -113,12 +134,33 @@ export const RightPanel: React.FC = () => {
         overflowY: 'auto',
         p: 2,
         display: { xs: 'none', lg: 'block' },
+        transition: 'all 0.3s ease-in-out',
         '&::-webkit-scrollbar': {
           width: '6px',
         },
         '&::-webkit-scrollbar-thumb': {
           backgroundColor: '#e0e0e0',
           borderRadius: '3px',
+        },
+        '& .MuiPaper-root': {
+          transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
+          '&:hover': {
+            transform: 'translateY(-2px)',
+            boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+          }
+        },
+        '& .MuiListItem-root': {
+          transition: 'all 0.2s ease-in-out',
+          '&:hover': {
+            transform: 'translateX(-4px)',
+            bgcolor: '#f5f5f5',
+          }
+        },
+        '& .MuiIconButton-root': {
+          transition: 'all 0.2s ease-in-out',
+          '&:hover': {
+            transform: 'rotate(10deg)',
+          }
         }
       }}
     >
