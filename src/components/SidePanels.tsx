@@ -28,10 +28,18 @@ export const LeftPanel: React.FC = () => {
         left: 0,
         top: 80,
         bottom: 0,
-        width: 250,
+        width: { lg: '20%', xl: '15%' },
+        maxWidth: 300,
         overflowY: 'auto',
         p: 2,
-        display: { xs: 'none', lg: 'block' }
+        display: { xs: 'none', lg: 'block' },
+        '&::-webkit-scrollbar': {
+          width: '6px',
+        },
+        '&::-webkit-scrollbar-thumb': {
+          backgroundColor: '#e0e0e0',
+          borderRadius: '3px',
+        }
       }}
     >
       <Paper elevation={0} sx={{ p: 2, mb: 2, border: '1px solid #e0e0e0' }}>
@@ -100,10 +108,18 @@ export const RightPanel: React.FC = () => {
         right: 0,
         top: 80,
         bottom: 0,
-        width: 250,
+        width: { lg: '20%', xl: '15%' },
+        maxWidth: 300,
         overflowY: 'auto',
         p: 2,
-        display: { xs: 'none', lg: 'block' }
+        display: { xs: 'none', lg: 'block' },
+        '&::-webkit-scrollbar': {
+          width: '6px',
+        },
+        '&::-webkit-scrollbar-thumb': {
+          backgroundColor: '#e0e0e0',
+          borderRadius: '3px',
+        }
       }}
     >
       <Paper elevation={0} sx={{ p: 2, mb: 2, border: '1px solid #e0e0e0' }}>

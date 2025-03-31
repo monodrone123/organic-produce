@@ -323,7 +323,13 @@ const Home: React.FC = () => {
   return (
     <Box sx={{ mt: 10, mb: 4 }}>
       <LeftPanel />
-      <Container maxWidth="lg">
+      <Box
+        sx={{
+          width: { xs: '100%', lg: '60%', xl: '70%' },
+          mx: 'auto',
+          px: { xs: 2, sm: 3 }
+        }}
+      >
         <Grid container spacing={3}>
           {filteredProducts.map((product) => (
             <Grid item xs={12} sm={6} md={4} key={product.id}>
@@ -467,7 +473,7 @@ const Home: React.FC = () => {
             </Grid>
           ))}
         </Grid>
-      </Container>
+      </Box>
       <RightPanel />
       <Snackbar
         open={snackbarOpen}
