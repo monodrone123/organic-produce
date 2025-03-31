@@ -145,7 +145,7 @@ const Checkout: React.FC = () => {
                       secondary={`Quantity: ${item.quantity}`}
                     />
                     <Typography variant="body2">
-                      ${(item.product.price * item.quantity).toFixed(2)}
+                      ₹{(item.product.price * item.quantity).toFixed(2)}
                     </Typography>
                   </ListItem>
                   <Divider />
@@ -154,7 +154,7 @@ const Checkout: React.FC = () => {
               <ListItem>
                 <ListItemText primary="Total" />
                 <Typography variant="h6" color="primary">
-                  ${total.toFixed(2)}
+                  ₹{total.toFixed(2)}
                 </Typography>
               </ListItem>
             </List>
