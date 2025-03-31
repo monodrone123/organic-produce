@@ -51,8 +51,8 @@ const Checkout: React.FC = () => {
 
   if (items.length === 0) {
     return (
-      <Container>
-        <Box sx={{ my: 4, textAlign: 'center' }}>
+      <Container sx={{ mt: 10, mb: 4 }}>
+        <Box sx={{ textAlign: 'center' }}>
           <Typography variant="h5" gutterBottom>
             Your cart is empty
           </Typography>
@@ -70,8 +70,8 @@ const Checkout: React.FC = () => {
   }
 
   return (
-    <Container>
-      <Typography variant="h4" sx={{ my: 4 }}>
+    <Container sx={{ mt: 10, mb: 4 }}>
+      <Typography variant="h4" sx={{ mb: 4 }}>
         Checkout
       </Typography>
       <Grid container spacing={3}>
