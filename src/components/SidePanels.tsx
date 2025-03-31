@@ -34,7 +34,7 @@ export const LeftPanel: React.FC = () => {
         p: 2,
         display: { xs: 'none', lg: 'block' },
         bgcolor: '#ffffff',
-        zIndex: 1,
+        borderRight: '1px solid #e0e0e0',
         transition: 'all 0.3s ease-in-out',
         '&::-webkit-scrollbar': {
           width: '6px',
@@ -137,7 +137,7 @@ export const RightPanel: React.FC = () => {
         p: 2,
         display: { xs: 'none', lg: 'block' },
         bgcolor: '#ffffff',
-        zIndex: 1,
+        borderLeft: '1px solid #e0e0e0',
         transition: 'all 0.3s ease-in-out',
         '&::-webkit-scrollbar': {
           width: '6px',

@@ -321,15 +321,15 @@ const Home: React.FC = () => {
   });
 
   return (
-    <Box sx={{ mt: 10, mb: 4 }}>
+    <Box sx={{ mt: 10, mb: 4, display: 'flex' }}>
       <LeftPanel />
       <Box
         sx={{
           width: { xs: '100%', lg: '60%' },
           transition: 'all 0.3s ease-in-out',
           display: { xs: 'block', lg: 'block' },
-          position: { xs: 'static', lg: 'fixed' },
-          left: { lg: '20%' },
+          marginLeft: { xs: 0, lg: '20%' },
+          marginRight: { xs: 0, lg: '20%' },
           px: { xs: 2, sm: 3 },
           height: 'calc(100vh - 80px)',
           overflowY: 'auto',
