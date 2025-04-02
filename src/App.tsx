@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material';
 import { AuthProvider } from './context/AuthContext';
@@ -12,8 +12,26 @@ import AdminDashboard from './pages/AdminDashboard';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import PrivateRoute from './components/PrivateRoute';
+import { initGA, logPageView } from './analytics';
 
 const App: React.FC = () => {
+  useEffect(() => {
+    // Initialize GA
+    initGA();
+    // Log initial page view
+    logPageView();
+    
+    // Log page views on route changes
+    const handleRouteChange = () => {
+      logPageView();
+    };
+
+    window.addEventListener('popstate', handleRouteChange);
+    return () => {
+      window.removeEventListener('popstate', handleRouteChange);
+    };
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <AuthProvider>
