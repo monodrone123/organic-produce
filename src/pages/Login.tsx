@@ -9,6 +9,7 @@ import {
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { logEvent, setUser } from '../analytics';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -21,9 +22,14 @@ const Login: React.FC = () => {
     e.preventDefault();
     try {
       await login(email, password);
+      // Track successful login
+      logEvent('User', 'Login', 'Success');
+      setUser(email); // Track user
       navigate('/');
-    } catch (err) {
+    } catch (error) {
       setError('Invalid credentials');
+      // Track failed login
+      logEvent('User', 'Login', 'Failed');
     }
   };
 
