@@ -331,7 +331,7 @@ const Home: React.FC = () => {
           marginLeft: { xs: 0, lg: '20%' },
           marginRight: { xs: 0, lg: '20%' },
           px: { xs: 2, sm: 3 },
-          height: 'calc(100vh - 180px)',
+          height: 'calc(100vh - 140px)',
           overflowY: 'auto',
           '&::-webkit-scrollbar': {
             width: '8px'
