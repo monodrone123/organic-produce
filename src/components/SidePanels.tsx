@@ -10,6 +10,7 @@ import {
   Chip,
   IconButton,
   Badge,
+  Link,
 } from '@mui/material';
 import {
   LocalOffer as OfferIcon,
@@ -204,30 +205,53 @@ export const RightPanel: React.FC = () => {
       </Paper>
 
       <Paper elevation={0} sx={{ p: 2, border: '1px solid #e0e0e0' }}>
-        <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 2, color: '#1a1a1a' }}>
+        <Typography variant="subtitle1" color="primary" gutterBottom>
           Recipe Ideas
         </Typography>
-        <List dense>
-          <ListItem>
-            <ListItemText 
-              primary={<Typography sx={{ color: '#1a1a1a' }}>Mixed Fruit Salad</Typography>}
-              secondary={<Typography sx={{ color: '#0c831f' }}>Using items in your cart</Typography>}
-            />
-            <IconButton size="small" sx={{ color: '#1a1a1a' }}>
-              <RecipeIcon fontSize="small" />
-            </IconButton>
-          </ListItem>
-          <Divider sx={{ my: 1 }} />
-          <ListItem>
-            <ListItemText 
-              primary={<Typography sx={{ color: '#1a1a1a' }}>Vegetable Stir Fry</Typography>}
-              secondary={<Typography sx={{ color: '#0c831f' }}>Quick 15-min recipe</Typography>}
-            />
-            <IconButton size="small" sx={{ color: '#1a1a1a' }}>
-              <RecipeIcon fontSize="small" />
-            </IconButton>
-          </ListItem>
-        </List>
+        <Box sx={{ display: 'flex', alignItems: 'center', mb: 1, gap: 1 }}>
+          <RecipeIcon sx={{ fontSize: '1rem', color: 'text.secondary' }} />
+          <Link
+            href="https://youtube.com/shorts/KRNFeSbTVmc?si=JLMErG8RhCfHcukz"
+            target="_blank"
+            rel="noopener noreferrer"
+            color="text.secondary"
+            sx={{ 
+              textDecoration: 'none', 
+              '&:hover': { 
+                color: 'primary.main',
+                textDecoration: 'underline'
+              },
+              display: 'flex',
+              alignItems: 'center',
+              gap: 0.5
+            }}
+          >
+            <Typography variant="body2">Mixed Fruit Salad</Typography>
+            <Typography variant="caption" color="success.main">Using items in your cart</Typography>
+          </Link>
+        </Box>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+          <RecipeIcon sx={{ fontSize: '1rem', color: 'text.secondary' }} />
+          <Link
+            href="https://youtube.com/shorts/EkQN0xNlFmI?si=tFvUJqTQSp4Qx3hc"
+            target="_blank"
+            rel="noopener noreferrer"
+            color="text.secondary"
+            sx={{ 
+              textDecoration: 'none', 
+              '&:hover': { 
+                color: 'primary.main',
+                textDecoration: 'underline'
+              },
+              display: 'flex',
+              alignItems: 'center',
+              gap: 0.5
+            }}
+          >
+            <Typography variant="body2">Vegetable Stir Fry</Typography>
+            <Typography variant="caption" color="success.main">Quick 15-min recipe</Typography>
+          </Link>
+        </Box>
       </Paper>
     </Box>
   );
