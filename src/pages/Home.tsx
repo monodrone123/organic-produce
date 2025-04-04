@@ -96,7 +96,7 @@ const mockProducts: Product[] = [
     name: 'Pineapple',
     type: 'fruit',
     price: 40,
-    image: '/organic-produce/resources/images/Pineapple.avif',
+    image: '/organic-produce/resources/images/Pineapple.jpeg',
   },
   {
     id: '12',
@@ -279,7 +279,14 @@ const mockProducts: Product[] = [
     type: 'vegetable',
     price: 16,
     image: '/organic-produce/resources/images/Spinach.jpg',
-  }
+  },
+  {
+    id: '38',
+    name: 'Capsicum',
+    type: 'vegetable',
+    price: 45,
+    image: '/organic-produce/resources/images/Capsicum.jpeg',
+  },
 ];
 
 const Home: React.FC = () => {

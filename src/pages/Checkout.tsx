@@ -12,6 +12,11 @@ import {
   ListItem,
   ListItemText,
   Snackbar,
+  Radio,
+  RadioGroup,
+  FormControlLabel,
+  FormControl,
+  FormLabel,
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
@@ -28,6 +33,7 @@ const Checkout: React.FC = () => {
     country: '',
   });
   const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [paymentMethod, setPaymentMethod] = useState('cod');
 
   const handleAddressChange = (field: keyof Address) => (
     e: React.ChangeEvent<HTMLInputElement>
@@ -40,8 +46,12 @@ const Checkout: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!address.street || !address.city || !address.state || !address.zipCode || !address.country) {
+      alert('Please fill in all address fields');
+      return;
+    }
     // Here you would typically send the order to your backend
-    console.log('Order submitted:', { items, address });
+    console.log('Order submitted:', { items, address, paymentMethod });
     clearCart();
     setSnackbarOpen(true);
     setTimeout(() => {
@@ -76,7 +86,7 @@ const Checkout: React.FC = () => {
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} md={8}>
-          <Paper sx={{ p: 3 }}>
+          <Paper sx={{ p: 3, mb: 3 }}>
             <Typography variant="h6" gutterBottom>
               Shipping Address
             </Typography>
@@ -129,6 +139,21 @@ const Checkout: React.FC = () => {
                 </Grid>
               </Grid>
             </form>
+          </Paper>
+          <Paper sx={{ p: 3 }}>
+            <FormControl component="fieldset">
+              <FormLabel component="legend">Payment Method</FormLabel>
+              <RadioGroup
+                value={paymentMethod}
+                onChange={(e) => setPaymentMethod(e.target.value)}
+              >
+                <FormControlLabel
+                  value="cod"
+                  control={<Radio />}
+                  label="Cash on Delivery"
+                />
+              </RadioGroup>
+            </FormControl>
           </Paper>
         </Grid>
         <Grid item xs={12} md={4}>
