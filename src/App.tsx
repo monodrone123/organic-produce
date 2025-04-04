@@ -43,10 +43,16 @@ const App: React.FC = () => {
               <Box sx={{ 
                 display: 'flex', 
                 flexDirection: 'column',
-                minHeight: '100vh'
+                minHeight: '100vh',
+                position: 'relative'
               }}>
                 <Navbar />
-                <Box sx={{ flex: 1 }}>
+                <Box sx={{ 
+                  flex: 1,
+                  pb: 4, // Add padding bottom to prevent content overlap with footer
+                  position: 'relative',
+                  zIndex: 1
+                }}>
                   <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/login" element={<Login />} />

@@ -7,16 +7,20 @@ import PhoneIcon from '@mui/icons-material/Phone';
 const Footer: React.FC = () => {
   return (
     <Box
+      component="footer"
       sx={{
         bgcolor: '#f5f5f5',
-        py: 6,
-        mt: 'auto',
-        borderTop: '1px solid #e0e0e0'
+        py: 4,
+        borderTop: '1px solid #e0e0e0',
+        position: 'relative',
+        width: '100%',
+        zIndex: 1000,
+        mt: 4
       }}
     >
-      <Container maxWidth="lg">
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={6}>
+      <Container maxWidth={false}>
+        <Grid container spacing={4} justifyContent="center">
+          <Grid item xs={12} md={4}>
             <Typography variant="h6" color="primary" gutterBottom>
               About Us
             </Typography>
@@ -29,7 +33,7 @@ const Footer: React.FC = () => {
               straight to your doorstep—so you can enjoy healthy, farm-fresh goodness every day!
             </Typography>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={4}>
             <Typography variant="h6" color="primary" gutterBottom>
               Contact Us
             </Typography>
