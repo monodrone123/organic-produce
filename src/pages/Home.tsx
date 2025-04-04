@@ -162,13 +162,6 @@ const mockProducts: Product[] = [
     image: '/organic-produce/resources/images/Lemon.jpg',
   },
   {
-    id: '21',
-    name: 'Green Capsicum',
-    type: 'vegetable',
-    price: 50,
-    image: '/organic-produce/resources/images/Green Capsicum.jpg',
-  },
-  {
     id: '22',
     name: 'Amla',
     type: 'vegetable',
